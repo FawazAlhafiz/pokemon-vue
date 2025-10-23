@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <ul>
-      <li v-for="pokemon in pokemoon" :key="pokemon.id">{{ pokemon.name }}</li>
+      <li v-for="pokemon in pokemoon" :key="pokemon.id">
+        <Pokemam :name="pokemon.name" :image="pokemon.image" :type="pokemon.type" :id="pokemon.id" />
+      </li>
     </ul>
   </div>
 </template>
@@ -9,6 +11,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Pokemam from './Pokemam.vue';
 
 const pokemoon = ref([]);
 
