@@ -1,17 +1,11 @@
 <template>
-  <div id="app">
-    <ul>
-      <li v-for="pokemon in pokemoon" :key="pokemon.id">
-        <Pokemam :name="pokemon.name" :image="pokemon.image" :type="pokemon.type" :id="pokemon.id" />
-      </li>
-    </ul>
-  </div>
+  <Pokedex />
 </template>
 
 
 <script setup>
 import { ref } from 'vue';
-import Pokemam from './Pokemam.vue';
+import Pokedex from './components/Pokedex.vue';
 
 const pokemoon = ref([]);
 
