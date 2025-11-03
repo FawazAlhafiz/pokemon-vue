@@ -1,7 +1,7 @@
 <template>
-  <div class="loading-container">
-    <div class="spinner"></div>
-    <p class="loading-text">{{ message }}</p>
+  <div class="flex flex-col items-center justify-center p-10 min-h-[200px]">
+    <div class="w-[50px] h-[50px] border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin"></div>
+    <p class="mt-5 text-lg text-gray-600 font-light">{{ message }}</p>
   </div>
 </template>
 
@@ -13,35 +13,3 @@ defineProps({
   }
 });
 </script>
-
-
-<style scoped>
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  min-height: 200px;
-}
-
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loading-text {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #666;
-}
-</style>

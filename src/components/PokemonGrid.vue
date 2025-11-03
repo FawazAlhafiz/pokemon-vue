@@ -1,5 +1,6 @@
 <template>
-  <ul class="pokemon-grid">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 list-none p-0 m-0">
+
     <PokemonCard 
       v-for="pokemon in pokemonList" 
       :key="pokemon.id" 
@@ -20,22 +21,3 @@
     }
   });
 </script>
-
-
-<style scoped>
-  .pokemon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  @media (max-width: 768px) {
-    .pokemon-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 15px;
-    }
-  }
-</style>

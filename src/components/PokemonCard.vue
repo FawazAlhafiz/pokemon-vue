@@ -1,5 +1,6 @@
 <template>
-  <li class="bg-white rounded-lg p-5 text-center shadow-md transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:shadow-lg">
+  <li class="bg-white rounded-lg p-5 text-center shadow-md transition-all duration-200 cursor-pointer
+              hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
     <img 
       class="w-30 h-30 object-contain mx-auto" 
       :src="pokemon.image" 

@@ -1,8 +1,8 @@
 <template>
-  <div class="pokedex-container">
-    <header class="pokedex-header">
-      <h1>Pokédex</h1>
-      <p class="subtitle">Discover {{ pokemonList.length }} Pokémon</p>
+  <div class="p-5 max-w-[1200px] mx-auto md:p-[15px]">
+    <header class="text-center mb-[30px]">
+      <h1 class="text-4xl text-gray-800 mb-2 md:text-[28px]">Pokédex</h1>
+      <p class="text-base text-gray-600 m-0">Discover {{ pokemonList.length }} Pokémon</p>
     </header>
     
     <LoadingSpinner 
@@ -40,38 +40,3 @@
     fetchPokemon(150);
   };
 </script>
-
-<style scoped>
-  .pokedex-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .pokedex-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .pokedex-header h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 8px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    color: #666;
-    margin: 0;
-  }
-
-  @media (max-width: 768px) {
-    .pokedex-container {
-      padding: 15px;
-    }
-    
-    .pokedex-header h1 {
-      font-size: 28px;
-    }
-  }
-</style>

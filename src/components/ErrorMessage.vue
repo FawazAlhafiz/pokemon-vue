@@ -1,8 +1,12 @@
 <template>
-  <div class="error-container">
-    <div class="error-icon">⚠️</div>
-    <p class="error-message">{{ message }}</p>
-    <button v-if="onRetry" @click="onRetry" class="retry-button">
+  <div class="flex flex-col items-center justify-center p-10 min-h-[200px]">
+    <div class="text-5xl mb-4">⚠️</div>
+    <p class="text-red-600 text-lg text-center mb-5">{{ message }}</p>
+    <button 
+      v-if="onRetry" 
+      @click="onRetry" 
+      class="px-5 py-2.5 bg-blue-500 text-white border-none rounded cursor-pointer text-base transition-colors hover:bg-blue-700"
+    >
       Try Again
     </button>
   </div>
@@ -22,43 +26,3 @@ defineProps({
   }
 });
 </script>
-
-
-
-<style scoped>
-.error-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  min-height: 200px;
-}
-
-.error-icon {
-  font-size: 48px;
-  margin-bottom: 16px;
-}
-
-.error-message {
-  color: #d32f2f;
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.retry-button {
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.2s;
-}
-
-.retry-button:hover {
-  background-color: #2980b9;
-}
-</style>
